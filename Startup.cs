@@ -30,7 +30,7 @@ namespace Projekt_2
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().AddSessionStateTempDataProvider();
-            services.AddSession(options => //sprawdz co to dokładnie robi!!!!!!!!
+            services.AddSession(options =>
             {
                 options.IdleTimeout = TimeSpan.FromSeconds(10);
                 options.Cookie.HttpOnly = true;
