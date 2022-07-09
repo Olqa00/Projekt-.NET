@@ -1,0 +1,28 @@
+﻿@page
+@model Projekt_2.Pages.ProductTypes.DeleteModel
+
+@{
+    ViewData["Title"] = "Usuń typ";
+}
+
+<h1>Usuń typ</h1>
+
+<h3>Jesteś pewien, że chcesz usunąć typ?</h3>
+<div>
+    <h4>ProductType</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ProductType.name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProductType.name)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="ProductType.id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

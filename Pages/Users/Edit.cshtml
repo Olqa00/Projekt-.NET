@@ -1,0 +1,71 @@
+﻿@page
+@model Projekt_2.Pages.Users.EditModel
+
+@{
+    ViewData["Title"] = "Edytuj użytkownika";
+}
+
+<h1>Edytuj użytkownika</h1>
+
+<h4>Użytkownik</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="SiteUser.id" />
+            <div class="form-group">
+                <label asp-for="SiteUser.login" class="control-label"></label>
+                <input asp-for="SiteUser.login" class="form-control" />
+                <span asp-validation-for="SiteUser.login" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SiteUser.password" class="control-label"></label>
+                <input asp-for="SiteUser.password" class="form-control" />
+                <span asp-validation-for="SiteUser.password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SiteUser.confirmpassword" class="control-label"></label>
+                <input asp-for="SiteUser.confirmpassword" class="form-control" />
+                <span asp-validation-for="SiteUser.confirmpassword" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SiteUser.firstName" class="control-label"></label>
+                <input asp-for="SiteUser.firstName" class="form-control" />
+                <span asp-validation-for="SiteUser.firstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SiteUser.lastName" class="control-label"></label>
+                <input asp-for="SiteUser.lastName" class="form-control" />
+                <span asp-validation-for="SiteUser.lastName" class="text-danger"></span>
+            </div>
+            <div id="bold">Rola:</div>
+            <div>
+                <label for=" user">User</label>
+                <input type="radio" id="user" asp-for="SiteUser.Role"
+                       value="User" />         <!--Radio jednokrotnego wyboru, wybór obowiązkowy-->
+            </div>
+            <div>
+                <label for=" emplo">Employee</label>
+                <input type="radio" id="emplo" asp-for="SiteUser.Role"
+                       value="Employee" />
+            </div>
+            <div>
+                <label for=" admin">Admin</label>
+                <input type="radio" id="admin" asp-for="SiteUser.Role"
+                       value="Admin" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

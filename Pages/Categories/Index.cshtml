@@ -1,0 +1,37 @@
+﻿@page
+@model Projekt_2.Pages.Categories.IndexModel
+
+@{
+    ViewData["Title"] = "Lista kategorii";
+}
+
+<h1>Lista kategorii</h1>
+
+<p>
+    <a asp-page="Create">Stwórz nową kategorię</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Category[0].name)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Category) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.name)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edytuj</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Szczegóły</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Usuń</a> |
+                <a asp-page="./ShowProducts" asp-route-id="@item.ID">Pokaż produkty</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

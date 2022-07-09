@@ -1,0 +1,173 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+:root {
+    --color-dark: #361999;
+    --color-light: #78cc00;
+}
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+    color: #0366d6;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    align-content: center;
+    padding: 50px 0 20px 0;
+    background: linear-gradient(to right, #d9a7c7, #fffcdc ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: Monospace,sans-serif;
+    margin-bottom: 60px;
+}
+
+.footer {
+    background: linear-gradient( to left,rgba(255,255,255,0.05),rgba(255,255,255,0.35));
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+}
+
+#bold {
+    font-weight: bold;
+}
+
+#name {
+    color: #FF69B4;
+}
+
+.log {
+    background-position:center;
+    background: linear-gradient( to left,rgba(255,255,255,0.05),rgba(255,255,255,0.35));
+    border-radius: 15px;
+    box-shadow: 0px 8px 24px 0 rgba(0,0,0,0.3);
+    max-width: 300px;
+    padding: 36px 0 24px 0;
+    text-align: center;
+}
+#siu1,#siu2,#siu3,#siu4,#siu5 {
+    position: absolute;
+    top: 0px;
+    background: transparent;
+    width: 120px;
+    color: transparent;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: Georgia, serif;
+    font-size: 15px;
+    border: 2.5px solid transparent;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: .6s;
+}
+#divimg:hover > #siu1 {
+    top: 90px;
+    color: black;
+    background: dimgrey;
+    padding-bottom: 5px;
+}
+
+#divimg:hover > #siu2 {
+    top: 140px;
+    color: black;
+    background: dimgrey;
+    padding-bottom: 5px;
+}
+#divimg:hover > #siu3 {
+    top: 190px;
+    color: black;
+    background: dimgrey;
+    padding-bottom: 5px;
+}
+#divimg:hover > #siu4 {
+    top: 260px;
+    color: black;
+    background: dimgrey;
+    padding-bottom: 5px;
+}
+#divimg:hover > #siu5 {
+    top: 310px;
+    color: black;
+    background: dimgrey;
+    padding-bottom: 5px;
+}
+input,button {
+    background: linear-gradient( to left,rgba(255,255,255,0.1),rgba(255,255,255,0.25));
+    border: none;
+    border-radius: 18px;
+    box-shadow: 0px 8px 24px 0 rgba(0,0,0,0.3);
+    color: rgb(0,0,0);
+    padding: 24px 0 24px 0;
+    font-size: 24px;
+}
+
+input {
+    width: 100%;
+}
+
+label {
+    color: rgb(0,0,0);
+}
+nav {
+    background: linear-gradient( to left,rgba(255,255,255,0.05),rgba(255,255,255,0.35));
+    border: none;
+}

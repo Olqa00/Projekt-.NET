@@ -1,0 +1,40 @@
+﻿@page
+@model Projekt_2.Pages.Products.CartModel
+@{
+    ViewData["Title"] = "Koszyk";
+}
+<div>
+    <h3>KOSZYK</h3>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">@Html.DisplayNameFor(model => Model.productList[0].img)</th>
+                <th scope="col">@Html.DisplayNameFor(model => Model.productList[0].name)</th>
+                <th scope="col">@Html.DisplayNameFor(model => Model.productList[0].price)</th>
+                <th scope="col">Ilosc</th>
+                <!--<th scope="col">Suma produktu</th>-->
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var p in Model.productList)
+            {
+            <tr>
+                <td><img src=@Html.DisplayFor(modelItem => p.img) width="80" /></td>
+                <td>@Html.DisplayFor(m => p.name)</td>
+                <td>@Html.DisplayFor(m => p.price)</td>
+                <th>@Model.quantity[p.id]</th>
+                <!--<th@Model.sum[p.id]</th>-->
+            </tr>
+            }
+            <th></th>
+            <td>SUMA:</td>
+            <td>@Model.money</td>
+            <th></th>
+        </tbody>
+    </table>
+    <form method="post" class="d-inline">
+        <button id="myButtons" class="btn btn btn-primary">Wyczyść koszyk</button>
+    </form>
+
+    <a class="btn btn-success btn-large my-2 d-inline p-2" href="IndexUser">Powrót</a>
+</div>

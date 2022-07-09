@@ -1,0 +1,43 @@
+﻿@page
+@model Projekt_2.Pages.Login.RegisterModel
+@{
+}
+<div class="row">
+    <div class="col-md-4">
+        <form class="log" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="SiteUser.login" class="control-label"></label>
+                <input asp-for="SiteUser.login" class="form-control" />
+                <span asp-validation-for="SiteUser.login" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SiteUser.password" class="control-label"></label>
+                <input asp-for="SiteUser.password" class="form-control" />
+                <span asp-validation-for="SiteUser.password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SiteUser.confirmpassword" class="control-label"></label>
+                <input asp-for="SiteUser.confirmpassword" class="form-control" />
+                <span asp-validation-for="SiteUser.confirmpassword" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SiteUser.firstName" class="control-label"></label>
+                <input asp-for="SiteUser.firstName" class="form-control" />
+                <span asp-validation-for="SiteUser.firstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SiteUser.lastName" class="control-label"></label>
+                <input asp-for="SiteUser.lastName" class="form-control" />
+                <span asp-validation-for="SiteUser.lastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

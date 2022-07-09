@@ -1,0 +1,64 @@
+﻿@page
+@model Projekt_2.Pages.Categories.ShowProductsModel
+@{
+    ViewData["Title"] = "Pokaż produkty należące do kategorii";
+}
+<h1>Produkty z kategorii: <b>@Html.DisplayFor(model => model.category.name)</b></h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.productList[0].name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.productList[0].author)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.productList[0].year)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.productList[0].publishing_house)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.productList[0].price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.productList[0].description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.productList[0].img)
+            </th>
+        </tr>
+
+    </thead>
+    <tbody>
+        @foreach (var item in Model.productList)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.author)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.year)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.publishing_house)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.description)
+            </td>
+            <td>
+                <img src=@Html.DisplayFor(modelItem => item.img) width="80" />
+            </td>
+        </tr>
+        }
+    </tbody>
+
+</table>
+<a asp-page="./Index">Powrót do listy kategorii</a>
