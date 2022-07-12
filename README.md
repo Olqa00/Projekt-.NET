@@ -1,13 +1,13 @@
-# Projekt-.NET
-Projekt na zaliczenie przedmiotu "Programowanie aplikacji WWW w technologii .NET" w semestrze 4.
+# .NET- Project
 
-Projekt polegał na utworzeniu strony internetowej dla księgarni internetowej zawierającej następujące funkcjonalności:
+Website for Bookstore.
+Include:
 - ado.net
 - Entity Framework Core
-- Relacje z bazą danych( jeden do wielu oraz wiele do wielu)
-- Uwierzytelnianie stron internetowych dla zalogowanych użytkowników
-- Uwierzytelnianie stron ze względu na przypisaną do niego Roli w bazie danych
-- Mechanizm Session
-- Walidacja danych
+- Relations in database 
+- Authentication logged users
+- Authentication users with roles
+- Session
+- Data Validation
 - Cookies
 - Middleware
